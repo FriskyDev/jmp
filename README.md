@@ -10,6 +10,8 @@ Use jmp locations to:
   * go to common locations you fequent
   * remember specific paths you don't use often
 
+The jmp list is saved in a file in your home directory named ".jump_list.txt". This way, the jmp list is persisted across logins.
+
 ## Step-by-step guide
 First, you need to install jmp. This is as simple as adding a couple of script files and editing your .bashrc.
 
@@ -29,17 +31,10 @@ jmp --add
 
 By default, the folder name is used to identify the jmp location. Optionally you may provide your own name.
 
-this add the current path as "myName" in the list.
+this version of the commands adds the current path as "myName" to your jmp list.
 ```bash
 jmp -a myName
-```
-
-#### To  add a new item with a given name:
-hint: add the cwd as "work"
-
-```
-jmp -a work
-jmp --add work
+jmp --add myName
 ```
 
 #### To list your current jmp locations:
