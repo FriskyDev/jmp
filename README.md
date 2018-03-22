@@ -15,10 +15,20 @@ The jmp list is saved in a file in your home directory named "```.jump_list.txt`
 ## Step-by-step guide
 First, you need to install jmp. This is as simple as adding a couple of script files and editing your .bashrc.
 
-Create a folder for your scripts: mkdir -p ~/bin/
-Copy the scripts into this folder. (see below)
-Add the following line near the bottom of you .bashrc file: source ~/bin/jmp.sh
-You will need to source your .bashrc or log out/in for the changes to take effect.
+0. Create a folder for your scripts:
+   ```bash
+   mkdir -p ~/bin/
+   ```
+0. Copy the scripts into this folder:
+   ```bash
+   cp ~/Downloads/jmp/jmp.sh ~/bin/jmp.sh
+   cp ~/Downloads/jmp/jmp.py ~/bin/jmp.py
+   ```
+0. Add the following line near the bottom of you .bashrc file:
+   ```bash
+   source ~/bin/jmp.sh
+   ```
+0. You will need to source your .bashrc or log out/in for the changes to take effect.
 
 ## Now let's jmp...
 #### To add a new item to your jmp list:
