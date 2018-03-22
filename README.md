@@ -6,9 +6,9 @@ This is where jmp lists can help. A jmp list is simply a list of locations that 
 
 Use jmp locations to:
 
-keep track of your current task folders (use work, work1, etc.)
-go to common locations you fequent
-remember specific paths you don't use often
+  * keep track of your current task folders (use work, work1, etc.)
+  * go to common locations you fequent
+  * remember specific paths you don't use often
 
 ## Step-by-step guide
 First, you need to install jmp. This is as simple as adding a couple of script files and editing your .bashrc.
@@ -25,6 +25,13 @@ hint: adds the cwd (current work directory) using the name of the folder you are
 ```bash
 jmp -a
 jmp --add
+```
+
+By default, the folder name is used to identify the jmp location. Optionally you may provide your own name.
+
+this add the current path as "myName" in the list.
+```bash
+jmp -a myName
 ```
 
 #### To  add a new item with a given name:
