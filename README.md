@@ -1,6 +1,6 @@
 # Jump Lists in Linux / OSX
 
-Do you constantly need to jump between different locations with very different paths. Yes, cd and pushd / popd can help you get around sometimes. But I find that I am constantly jumping back and forth between different locations.
+Do you constantly need to jump between different locations with very different paths. Yes, cd, cd -, and pushd/popd can help you get around sometimes. But I find that I am constantly jumping back and forth between different locations.
 
 This is where jmp lists can help. A jmp list is simply a list of locations that you frequent often. Creating and updating them is simple and fast.
 
@@ -31,6 +31,14 @@ First, you need to install jmp. This is as simple as adding a couple of script f
 0. You will need to source your .bashrc or log out/in for the changes to take effect.
 
 ## Now let's jmp...
+#### Newly added
+Just type jmp to get a list of your current locations.
+
+````bash
+jmp
+````
+Also, if you type jmp and a name that does not exist, you now get the list after the error message.
+
 #### To add a new item to your jmp list:
 hint: adds the cwd (current work directory) using the name of the folder you are currently in
 
