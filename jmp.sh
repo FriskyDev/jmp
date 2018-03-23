@@ -1,14 +1,19 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
 JMPSCRIPT="${HOME}/bin/jmp.py"
-jmp() {
+
+function jmp() {
     if [[ ${1} == "-"* ]]; then
         python3 ${JMPSCRIPT} ${@}
         return
     fi
- 
+
     output="$(python3 ${JMPSCRIPT} ${@})"
     if [[ -z "${output}" ]]; then
-        echo "err: name '${1}' not in jump list"
+        if [[ -n "${1}" ]]; then
+            echo "err: name '${1}' not in jump list"
+        fi
+        python3 ${JMPSCRIPT} -l
         false
     elif [[ -d "${output}" ]]; then
         if [ -t 1 ]; then  # if stdout is a terminal, use colors
