@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Support the jmp command to provide the working jump-list."""
 import argparse
+import collections
 import os
 import os.path
 import sys
 import ntpath
  
 FILENAME = "{0}/.jump_list.txt".format(os.environ["HOME"])
-VERSION = "0.2"
+VERSION = "0.4"
  
 def load_state():
     """Loads the jumplist file into a dictionary and returns it.
@@ -77,7 +78,12 @@ def remove_item_from_list(jmp_list, name):
         write_state(jmp_list)
     else:
         print("name '{0}' not found".format(name))
- 
+
+def sort_list(jmp_list):
+    """Sort the items in the jump-list by name."""
+    ordered = collections.OrderedDict(sorted(jmp_list.items(), key=lambda k: k[0]))
+    write_state(ordered)
+
 def main():
     """Main program."""
     parser = argparse.ArgumentParser(description='Maintains a jump-list.')
@@ -87,6 +93,7 @@ def main():
     parser.add_argument('-r', '--rm', action='store_true',
                         help='remove a named item from the jump-list')
     parser.add_argument('-v', '--version', action='store_true', help='print version')
+    parser.add_argument('-s', '--sort', action='store_true', help='sort jmp list by name')
     parser.add_argument('name', nargs='?', default='', help='the name of the item to jump to')
     args = parser.parse_args()
  
@@ -100,6 +107,8 @@ def main():
         add_item_to_list(jmp_list, args.name)
     elif args.rm:
         remove_item_from_list(jmp_list, args.name)
+    elif args.sort:
+        sort_list(jmp_list)
     elif len(sys.argv) > 1:
         if sys.argv[1] in jmp_list:
             # get the path
