@@ -4,9 +4,7 @@ Do you constantly need to jump between different locations with very different p
 
 This is where jmp lists can help. A jmp list is simply a list of locations that you frequent often.
 
-Creating and updating them is simple and fast.
-
-You just assign an alias to use for the location and specify the path to associate it with.
+Creating and updating them is simple and fast. You just assign an alias to use for the location and specify the path to associate it with.
 
 Use jmp locations to:
 
