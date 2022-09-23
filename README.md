@@ -2,7 +2,11 @@
 
 Do you constantly need to jump between different locations with very different paths. Yes, cd, cd -, and pushd/popd can help you get around sometimes. But I find that I am constantly jumping back and forth between different locations.
 
-This is where jmp lists can help. A jmp list is simply a list of locations that you frequent often. Creating and updating them is simple and fast.
+This is where jmp lists can help. A jmp list is simply a list of locations that you frequent often.
+
+Creating and updating them is simple and fast.
+
+You just assign an alias to use for the location and specify the path to associate it with.
 
 Use jmp locations to:
 
