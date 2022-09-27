@@ -51,7 +51,8 @@ jmp --add
 
 By default, the folder name is used to identify the jmp location. Optionally you may provide your own name.
 
-this version of the commands adds the current path as "myName" to your jmp list.
+This version of the commands adds the current path as "myName" to your jmp list.
+
 ```bash
 jmp -a myName
 jmp --add myName
