@@ -7,7 +7,6 @@ This is where jmp lists can help. A jmp list is simply a list of locations that 
 Creating and updating them is simple and fast. You just assign an alias to use for the location and specify the path to associate it with.
 
 Use jmp locations to:
-
   * keep track of your current task folders (use work, work1, etc.)
   * go to common locations you fequent
   * remember specific paths you don't use often
