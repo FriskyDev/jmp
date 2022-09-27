@@ -66,7 +66,8 @@ jmp --list
 ```
 
 #### To remove an entry you no longer want or need:
-hint: removes the jmp list item "name" from your list
+
+> hint: removes the jmp list item "name" from your list
 
 ```
 jmp -r name
